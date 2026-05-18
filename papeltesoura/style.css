@@ -1,0 +1,368 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+body{
+    min-height:100vh;
+
+    background:
+        radial-gradient(circle at top left, #1d4ed8, transparent 30%),
+        linear-gradient(135deg, #020617, #0f172a);
+
+    color:white;
+}
+
+/* TELA INICIAL */
+#inicio{
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,0.7);
+
+    backdrop-filter:blur(8px);
+
+    z-index:999;
+}
+
+/* CARD INICIAL */
+.cardInicio{
+    width:90%;
+    max-width:420px;
+
+    background:#0f172a;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:20px;
+
+    text-align:center;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.45);
+}
+
+/* TÍTULO */
+.cardInicio h1{
+    font-size:2rem;
+
+    color:white;
+}
+
+/* TEXTO */
+.cardInicio p{
+    color:#cbd5e1;
+}
+
+/* INPUTS */
+.cardInicio input{
+    padding:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    font-size:1rem;
+
+    outline:none;
+
+    background:#1e293b;
+
+    color:white;
+}
+
+/* PLACEHOLDER */
+.cardInicio input::placeholder{
+    color:#94a3b8;
+}
+
+/* BOTÃO COMEÇAR */
+.cardInicio button{
+    padding:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+/* HOVER */
+.cardInicio button:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(37,99,235,0.35);
+}
+
+/* HEADER */
+header{
+    width:100%;
+
+    text-align:center;
+
+    padding:40px 20px;
+}
+
+/* TÍTULO */
+header h1{
+    font-size:2.7rem;
+
+    margin-bottom:10px;
+}
+
+/* SUBTÍTULO */
+.subtitulo{
+    color:#cbd5e1;
+
+    font-size:1rem;
+}
+
+/* MAIN */
+main{
+    width:100%;
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:20px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:35px;
+}
+
+/* ÁREA DO JOGO */
+.game{
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+}
+
+/* CARTAS */
+
+/* HOVER CARTA */
+.card:hover{
+    transform:
+        translateY(-6px)
+        scale(1.03);
+}
+
+/* IMAGEM CARTA */
+.card img{
+    width:120px;
+    height:120px;
+
+    object-fit:contain;
+}
+
+/* TEXTO CARTA */
+.card h2{
+    font-size:1.5rem;
+}
+
+/* PLACAR */
+.scores{
+    width:100%;
+    max-width:550px;
+
+    display:flex;
+
+    gap:20px;
+}
+
+/* CARD PLACAR */
+.score{
+    flex:1;
+
+    background:#0f172a;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* NOME */
+.score h3{
+    color:#cbd5e1;
+
+    margin-bottom:10px;
+}
+
+/* PONTOS */
+.score p{
+    font-size:2rem;
+
+    font-weight:bold;
+}
+
+/* RESULTADO */
+.resultado{
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+}
+
+/* ESCOLHA */
+.escolha{
+    background:#0f172a;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    min-width:220px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* NOME RESULTADO */
+.escolha h3{
+    margin-bottom:15px;
+
+    color:#93c5fd;
+}
+
+/* IMAGEM RESULTADO */
+.escolha img{
+    width:120px;
+    height:120px;
+
+    object-fit:contain;
+}
+
+/* X */
+.resultado h1{
+    font-size:4rem;
+}
+
+/* MENSAGEM */
+.mensagem{
+    width:100%;
+    max-width:600px;
+
+    background:#0f172a;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* TEXTO MENSAGEM */
+.mensagem p{
+    font-size:1.1rem;
+
+    color:#e2e8f0;
+}
+
+/* BOTÃO RESET */
+
+
+/* HOVER RESET */
+.reset:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 20px 45px rgba(37,99,235,0.45);
+}
+
+/* RESPONSIVIDADE */
+@media(max-width:900px){
+
+    .game{
+        grid-template-columns:1fr;
+    }
+
+    .resultado{
+        flex-direction:column;
+    }
+
+    .resultado h1{
+        font-size:3rem;
+    }
+
+}
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:2rem;
+    }
+
+    .card img,
+    .escolha img{
+        width:90px;
+        height:90px;
+    }
+
+    .card h2{
+        font-size:1.2rem;
+    }
+
+    .scores{
+        flex-direction:column;
+    }
+
+    .escolha{
+        min-width:100%;
+    }
+
+}
