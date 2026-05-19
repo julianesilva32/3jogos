@@ -1,9 +1,3 @@
-/* Remove margens e espaçamentos padrões dos navegadores */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 /* Estiliza o corpo da página */
 body {
@@ -118,4 +112,25 @@ body {
   .hero h1 {
     font-size: 32px;
   }
+} 
+
+/* video card */
+.card{
+  width: 320px;
+  background: #1e1e1e;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.video-card{
+  width: 100%;
+  height: 200px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  margin-top: 15px;
+  margin-bottom: 15px;
 }

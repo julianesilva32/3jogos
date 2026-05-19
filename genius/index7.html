@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo Genius Animais</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Jogo <span>Genius</span></h1>
+
+  <div class="container">
+
+    <!-- TABULEIRO -->
+
+    <div class="game-board">
+
+      <!-- VACA -->
+
+      <div class="color green" data-color="green">
+
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/1998/1998610.png"
+          alt="Vaca"
+        >
+
+      </div>
+
+      <!-- MACACO -->
+
+      <div class="color red" data-color="red">
+
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3069/3069172.png"
+          alt="Macaco"
+        >
+
+      </div>
+
+      <!-- GATO -->
+
+      <div class="color yellow" data-color="yellow">
+
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/2138/2138440.png"
+          alt="Gato"
+        >
+
+      </div>
+
+      <!-- CACHORRO -->
+
+      <div class="color blue" data-color="blue">
+
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/616/616408.png"
+          alt="Cachorro"
+        >
+
+      </div>
+
+      <!-- CENTRO -->
+
+      <div class="center">
+
+        <h2>GENIUS</h2>
+
+        <p>Animais</p>
+
+      </div>
+
+    </div>
+
+    <!-- PAINEL -->
+
+    <div class="panel">
+
+      <!-- PLACAR -->
+
+      <div class="card">
+
+        <h3>PLACAR</h3>
+
+        <div class="infos">
+
+          <div>
+            <p>RODADA</p>
+            <span id="round">0</span>
+          </div>
+
+          <div>
+            <p>PONTOS</p>
+            <span id="score">0</span>
+          </div>
+
+          <div>
+            <p>RECORDE</p>
+            <span id="highScore">0</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- MENSAGEM -->
+
+      <div class="card">
+
+        <h3>MENSAGEM</h3>
+
+        <div class="message" id="message">
+
+          Clique em iniciar para jogar!
+
+        </div>
+
+      </div>
+
+      <!-- BOTÕES -->
+
+      <div class="card">
+
+        <h3>CONTROLES</h3>
+
+        <div class="buttons">
+
+          <button id="startBtn">
+            Iniciar
+          </button>
+
+          <button id="restartBtn">
+            Reiniciar
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- GAME OVER -->
+
+  <div class="game-over" id="gameOver">
+
+    <div class="game-over-content">
+
+      <h2>GAME OVER</h2>
+
+      <p id="finalScore">
+        Sua pontuação foi 0
+      </p>
+
+      <button onclick="restartGame()">
+        Jogar Novamente
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
