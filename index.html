@@ -1,115 +1,179 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <!-- Define o padrão de caracteres da página -->
+
   <meta charset="UTF-8">
 
-  <!-- Deixa a página adaptável para celular e computador -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-  <!-- Título que aparece na aba do navegador -->
-  <title>Página de Jogos com HTML, CSS e JavaScript</title>
+  <title>
+    Página de Jogos com HTML, CSS e JavaScript
+  </title>
 
-  <!-- Conecta o arquivo CSS ao HTML -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet"
+        href="css/style.css">
+
 </head>
+
 <body>
 
-  <!-- Área principal da página -->
   <main class="container">
 
-    <!-- Cabeçalho da página -->
-    <section class="hero">
-      <p class="tag">Página de Jogos</p>
+    <!-- TOPO -->
 
-      <h1>Página principal de Jogos</h1>
+    <section class="hero">
+
+      <p class="tag">
+        Página de Jogos
+      </p>
+
+      <h1>
+        Página Principal de Jogos
+      </h1>
 
     </section>
 
-    <!-- Área onde ficará o projeto -->
+    <!-- ÁREA DOS CARDS -->
+
     <section class="area-projeto">
 
-      <!-- Card com informações e botão -->
+      <!-- GENIUS -->
+
       <div class="card-info">
+
         <h2>GENIUS</h2>
 
         <p>
-      Jogo de memória para dois jogadores onde cada participante deve repetir corretamente a sequência de <br> 
-      cores e sons apresentada. A cada rodada a sequência aumenta, tornando o desafio mais difícil e competitivo.
+          Jogo de memória para dois jogadores
+          onde cada participante deve repetir
+          corretamente a sequência de cores e sons.
         </p>
-       
-          <!-- VIDEO -->
-  <video class="video-card" controls>
-    <source src="videos/jogodavelha.mp4" type="video/mp4">
-  </video>
 
-        <!-- Botão que será usado pelo JavaScript -->
-        <button id="btnAtivar" class="btn-principal">
-          JOGAR
-        </button>
+        <video class="video-card" controls>
+
+          <source
+            src="videos/genius.mp4"
+            type="video/mp4"
+          >
+
+        </video>
+
+        <a href="genius/index7.html">
+
+          <button class="btn-principal">
+
+            JOGAR
+
+          </button>
+
+        </a>
+
       </div>
 
-<!-- Card com informações e botão -->
+      <!-- JOGO DA VELHA -->
+
       <div class="card-info">
+
         <h2>JOGO DA VELHA</h2>
 
         <p>
-      Clássico jogo de estratégia para dois jogadores. O objetivo é alinhar três símbolos iguais na horizontal,<br>
-       vertical ou diagonal antes do adversário.
+          Clássico jogo de estratégia para
+          dois jogadores.
         </p>
 
-       <video class="video-card" controls>
-  <source src="./videos/jogodavelha.mp4" type="video/mp4">
-  Seu navegador não suporta vídeo.
-</video>
+        <video class="video-card" controls>
 
-        <!-- Botão que será usado pelo JavaScript -->
-        <button id="btnAtivar" class="btn-principal">
-          JOGAR
-        </button>
+          <source
+            src="videos/jogodavelha.mp4"
+            type="video/mp4"
+          >
+
+        </video>
+
+        <a href="jogodavelha/index2.html">
+
+          <button class="btn-principal">
+
+            JOGAR
+
+          </button>
+
+        </a>
+
       </div>
 
-       <!-- Card com informações e botão -->
-       <div class="card-info">
-        <h2>JOGO DA MEMORIA</h2>
+      <!-- MEMÓRIA -->
+
+      <div class="card-info">
+
+        <h2>JOGO DA MEMÓRIA</h2>
+
         <p>
-Jogo para dois jogadores que desafia a memória e a concentração. Os participantes <br>
-devem encontrar os pares de cartas iguais, e vence quem conseguir formar mais combinações.
+          Jogo para dois jogadores que desafia
+          memória e concentração.
         </p>
-<video class="video-card" controls>
-  <source src="memoria.mp4" type="video/mp4">
-  Seu navegador não suporta vídeo.
-</video>
-       
-        <!-- Botão que será usado pelo JavaScript -->
-        <button id="btnAtivar" class="btn-principal">
-          JOGAR
-        </button>
+
+        <video class="video-card" controls>
+
+          <source
+            src="memoria.mp4"
+            type="video/mp4"
+          >
+
+        </video>
+
+        <a href="jogomemoria/index3.html">
+
+          <button class="btn-principal">
+
+            JOGAR
+
+          </button>
+
+        </a>
+
       </div>
 
-     <!-- Card com informações e botão -->
-       <div class="card-info">
+      <!-- PEDRA PAPEL TESOURA -->
+
+      <div class="card-info">
+
         <h2>PEDRA, PAPEL E TESOURA</h2>
 
         <p>
-Jogo rápido e divertido para dois jogadores. Cada participante <br>
-escolhe entre pedra, papel ou tesoura, e o vencedor é definido pelas regras tradicionais do jogo.    
-    </p>
+          Jogo rápido e divertido para
+          dois jogadores.
+        </p>
 
-       <video class="video-card" controls>
-  <source src="." type="video/mp4">
-  Seu navegador não suporta vídeo.
-</video>
-        <!-- Botão que será usado pelo JavaScript -->
-        <button id="btnAtivar" class="btn-principal">
-          JOGAR
-        </button>
+        <video class="video-card" controls>
+
+          <source
+            src="videos/pedrapapeltesoura.mp4"
+            type="video/mp4"
+          >
+
+        </video>
+
+        <a href="papeltesoura/index4.html">
+
+          <button class="btn-principal">
+
+            JOGAR
+
+          </button>
+
+        </a>
+
       </div>
+
     </section>
 
   </main>
 
-  <!-- Conecta o JavaScript ao HTML -->
   <script src="js/script.js"></script>
+
 </body>
+
 </html>

@@ -3,138 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jogo Genius Animais</title>
+  <title>Genius Multiplayer</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <h1>Jogo <span>Genius</span></h1>
+<h1>Jogo <span>Genius</span></h1>
 
-  <div class="container">
+<div class="container">
 
-    <!-- TABULEIRO -->
+  <!-- TABULEIRO -->
 
-    <div class="game-board">
+  <div class="game-board">
 
-      <!-- VACA -->
+    <div class="color green botao" data-cor="green"></div>
 
-      <div class="color green" data-color="green">
+    <div class="color red botao" data-cor="red"></div>
 
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/1998/1998610.png"
-          alt="Vaca"
-        >
+    <div class="color yellow botao" data-cor="yellow"></div>
 
-      </div>
+    <div class="color blue botao" data-cor="blue"></div>
 
-      <!-- MACACO -->
+    <!-- CENTRO -->
 
-      <div class="color red" data-color="red">
+  </div>
 
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/3069/3069172.png"
-          alt="Macaco"
-        >
+  <!-- PAINEL -->
 
-      </div>
+  <div class="panel">
 
-      <!-- GATO -->
+    <!-- PLACAR -->
 
-      <div class="color yellow" data-color="yellow">
+    <div class="card">
 
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/2138/2138440.png"
-          alt="Gato"
-        >
+      <h3>PLACAR</h3>
 
-      </div>
+      <div class="infos">
 
-      <!-- CACHORRO -->
+        <div>
+          <p>RODADA</p>
+          <span id="round">0</span>
+        </div>
 
-      <div class="color blue" data-color="blue">
+        <div>
+          <p>PONTOS</p>
+          <span id="score">0 x 0</span>
+        </div>
 
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/616/616408.png"
-          alt="Cachorro"
-        >
-
-      </div>
-
-      <!-- CENTRO -->
-
-      <div class="center">
-
-        <h2>GENIUS</h2>
-
-        <p>Animais</p>
+        <div>
+          <p>RECORDE</p>
+          <span id="highScore">0</span>
+        </div>
 
       </div>
 
     </div>
 
-    <!-- PAINEL -->
+    <!-- MENSAGEM -->
 
-    <div class="panel">
+    <div class="card">
 
-      <!-- PLACAR -->
+      <h3>MENSAGEM</h3>
 
-      <div class="card">
+      <div class="message" id="message">
 
-        <h3>PLACAR</h3>
-
-        <div class="infos">
-
-          <div>
-            <p>RODADA</p>
-            <span id="round">0</span>
-          </div>
-
-          <div>
-            <p>PONTOS</p>
-            <span id="score">0</span>
-          </div>
-
-          <div>
-            <p>RECORDE</p>
-            <span id="highScore">0</span>
-          </div>
-
-        </div>
+        Clique em iniciar para jogar!
 
       </div>
 
-      <!-- MENSAGEM -->
+    </div>
 
-      <div class="card">
+    <!-- BOTÕES -->
 
-        <h3>MENSAGEM</h3>
+    <div class="card">
 
-        <div class="message" id="message">
+      <h3>CONTROLES</h3>
 
-          Clique em iniciar para jogar!
+      <div class="buttons">
 
-        </div>
+        <button id="startBtn">
+          Iniciar
+        </button>
 
-      </div>
-
-      <!-- BOTÕES -->
-
-      <div class="card">
-
-        <h3>CONTROLES</h3>
-
-        <div class="buttons">
-
-          <button id="startBtn">
-            Iniciar
-          </button>
-
-          <button id="restartBtn">
-            Reiniciar
-          </button>
-
-        </div>
+        <button id="restartBtn">
+          Reiniciar
+        </button>
 
       </div>
 
@@ -142,27 +97,36 @@
 
   </div>
 
-  <!-- GAME OVER -->
+</div>
+<!-- PAINEL NOMES -->
 
-  <div class="game-over" id="gameOver">
+<div class="name-panel" id="namePanel">
 
-    <div class="game-over-content">
+  <div class="name-box">
 
-      <h2>GAME OVER</h2>
+    <h2>Jogadores</h2>
 
-      <p id="finalScore">
-        Sua pontuação foi 0
-      </p>
+    <input
+      type="text"
+      id="player1"
+      placeholder="Nome do Jogador 1"
+    >
 
-      <button onclick="restartGame()">
-        Jogar Novamente
-      </button>
+    <input
+      type="text"
+      id="player2"
+      placeholder="Nome do Jogador 2"
+    >
 
-    </div>
+    <button id="playBtn">
+      COMEÇAR
+    </button>
 
   </div>
 
-  <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>

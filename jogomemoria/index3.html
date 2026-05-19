@@ -1,28 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+
   <title>Jogo da Memória</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet"
+        href="style.css" />
+
 </head>
+
 <body>
-  <div class="container">
+
+  <!-- PAINEL NOMES -->
+
+  <div id="inicio">
+
+    <div class="cardInicio">
+
+      <h1>Jogo da Memória</h1>
+
+      <p>
+        Digite o nome dos jogadores
+      </p>
+
+      <input
+        type="text"
+        id="nome1"
+        placeholder="Nome do Jogador 1"
+      >
+
+      <input
+        type="text"
+        id="nome2"
+        placeholder="Nome do Jogador 2"
+      >
+
+      <button onclick="comecarJogo()">
+
+        COMEÇAR
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- JOGO -->
+
+  <div class="container"
+       id="jogo"
+       style="display:none;">
+
     <h2>JOGO DA MEMÓRIA</h2>
 
+    <!-- VEZ -->
+
+    <div id="vezJogador">
+
+      Vez do Jogador 1
+
+    </div>
+
+    <!-- PLACAR -->
+
+    <div class="placar">
+
+      <div>
+
+        <h3 id="jogador1Nome">
+          Jogador 1
+        </h3>
+
+        <span id="score1">0</span>
+
+      </div>
+
+      <div>
+
+        <h3 id="jogador2Nome">
+          Jogador 2
+        </h3>
+
+        <span id="score2">0</span>
+
+      </div>
+
+    </div>
+
+    <!-- TABULEIRO -->
+
     <div class="game"></div>
-    
-    <div id="tentativas"></div>
 
-    <div class="mensagem">Parabéns!<br>Você passou no segundo teste!</div>
+    <!-- MENSAGEM -->
 
-    <a id="botao" href="https://julianesilva32.github.io/carta/" style="display: none;">
-      <button class="segundapagina">Ir para o terceiro jogo</button>
-    </a>
+    <div id="mensagem">
 
-    <button class="reset" onclick="window.location.reload()">Apagar Jogo</button>
+      Clique para começar
+
+    </div>
+
+    <!-- BOTÃO -->
+
+    <button class="reset"
+            onclick="window.location.reload()">
+
+      Reiniciar
+
+    </button>
+
   </div>
 
   <script src="script.js"></script>
+
 </body>
+
 </html>

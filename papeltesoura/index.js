@@ -1,22 +1,31 @@
 // NOMES DOS JOGADORES
+
 let nomeJogador1 = "Jogador 1";
+
 let nomeJogador2 = "Jogador 2";
 
 // PONTOS
+
 let pontos1 = 0;
+
 let pontos2 = 0;
 
 // CONTROLE DE TURNO
+
 let turno = 1;
 
 // ESCOLHAS
+
 let escolha1 = "";
+
 let escolha2 = "";
 
 // COMEÇAR JOGO
+
 function comecarJogo(){
 
     // PEGAR NOMES
+
     const nome1 =
         document.getElementById(
             "nome1"
@@ -28,6 +37,7 @@ function comecarJogo(){
         ).value;
 
     // VALIDAR NOME 1
+
     if(nome1.trim() !== ""){
 
         nomeJogador1 = nome1;
@@ -35,6 +45,7 @@ function comecarJogo(){
     }
 
     // VALIDAR NOME 2
+
     if(nome2.trim() !== ""){
 
         nomeJogador2 = nome2;
@@ -42,6 +53,7 @@ function comecarJogo(){
     }
 
     // COLOCAR NOMES NA TELA
+
     document.getElementById(
         "jogador1Nome"
     ).innerHTML = nomeJogador1;
@@ -59,16 +71,53 @@ function comecarJogo(){
     ).innerHTML = nomeJogador2;
 
     // ESCONDER MENU
+
     document.getElementById(
         "inicio"
     ).style.display = "none";
 
     // MOSTRAR JOGO
+
     document.getElementById(
         "jogo"
     ).style.display = "block";
 
-    // TEXTO
+    // RESETAR TUDO
+
+    pontos1 = 0;
+
+    pontos2 = 0;
+
+    turno = 1;
+
+    escolha1 = "";
+
+    escolha2 = "";
+
+    // RESETAR PLACAR
+
+    document.getElementById(
+        "score1"
+    ).innerHTML = 0;
+
+    document.getElementById(
+        "score2"
+    ).innerHTML = 0;
+
+    // RESETAR IMAGENS
+
+    document.getElementById(
+        "img1"
+    ).src =
+        "./player1.png";
+
+    document.getElementById(
+        "img2"
+    ).src =
+        "./player2.png";
+
+    // MENSAGEM
+
     document.getElementById(
         "mensagem"
     ).innerHTML =
@@ -77,9 +126,11 @@ function comecarJogo(){
 }
 
 // JOGAR
+
 function jogar(escolha){
 
     // JOGADOR 1
+
     if(turno === 1){
 
         escolha1 = escolha;
@@ -90,15 +141,16 @@ function jogar(escolha){
             "Vez de " + nomeJogador2;
 
         turno = 2;
-
     }
 
     // JOGADOR 2
+
     else{
 
         escolha2 = escolha;
 
         // MOSTRAR IMAGENS
+
         document.getElementById(
             "img1"
         ).src =
@@ -110,16 +162,17 @@ function jogar(escolha){
             "./" + escolha2 + "2.png";
 
         // VERIFICAR RESULTADO
+
         verificarResultado();
 
-        // VOLTA PARA JOGADOR 1
+        // VOLTAR TURNO
+
         turno = 1;
-
     }
-
 }
 
 // VERIFICAR RESULTADO
+
 function verificarResultado(){
 
     const mensagem =
@@ -128,14 +181,15 @@ function verificarResultado(){
         );
 
     // EMPATE
+
     if(escolha1 === escolha2){
 
         mensagem.innerHTML =
-            "Empate!";
-
+            "Empate! 🤝";
     }
 
     // JOGADOR 1 GANHA
+
     else if(
 
         (escolha1 === "pedra" &&
@@ -160,11 +214,11 @@ function verificarResultado(){
         ).innerHTML = pontos1;
 
         mensagem.innerHTML =
-            nomeJogador1 + " venceu!";
-
+            nomeJogador1 + " venceu! 🏆";
     }
 
     // JOGADOR 2 GANHA
+
     else{
 
         pontos2++;
@@ -174,27 +228,41 @@ function verificarResultado(){
         ).innerHTML = pontos2;
 
         mensagem.innerHTML =
-            nomeJogador2 + " venceu!";
-
+            nomeJogador2 + " venceu! 🏆";
     }
 
+    // MOSTRAR PRÓXIMA VEZ
+
+    setTimeout(() => {
+
+        mensagem.innerHTML =
+            "Vez de " + nomeJogador1;
+
+    }, 1500);
 }
 
 // REINICIAR JOGO
+
 function reiniciar(){
 
     // RESETAR PONTOS
+
     pontos1 = 0;
+
     pontos2 = 0;
 
-    // RESETAR TURNO
+    // RESETAR TURNOS
+
     turno = 1;
 
     // LIMPAR ESCOLHAS
+
     escolha1 = "";
+
     escolha2 = "";
 
     // RESETAR PLACAR
+
     document.getElementById(
         "score1"
     ).innerHTML = 0;
@@ -204,20 +272,21 @@ function reiniciar(){
     ).innerHTML = 0;
 
     // RESETAR MENSAGEM
+
     document.getElementById(
         "mensagem"
     ).innerHTML =
         "Vez de " + nomeJogador1;
 
     // RESETAR IMAGENS
+
     document.getElementById(
         "img1"
     ).src =
-        "./player2.png";
+        "./player1.png";
 
     document.getElementById(
         "img2"
     ).src =
         "./player2.png";
-
 }

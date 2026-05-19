@@ -4,16 +4,19 @@
 <head>
 
     <!-- CONFIGURAÇÕES -->
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
+
     <link rel="stylesheet"
           href="style.css">
 
     <!-- TÍTULO -->
+
     <title>Pedra, Papel e Tesoura</title>
 
 </head>
@@ -21,6 +24,7 @@
 <body>
 
     <!-- TELA INICIAL -->
+
     <div id="inicio">
 
         <div class="cardInicio">
@@ -32,16 +36,23 @@
             </p>
 
             <!-- INPUT JOGADOR 1 -->
-            <input type="text"
-                   id="nome1"
-                   placeholder="Nome do Jogador 1">
+
+            <input
+                type="text"
+                id="nome1"
+                placeholder="Nome do Jogador 1"
+            >
 
             <!-- INPUT JOGADOR 2 -->
-            <input type="text"
-                   id="nome2"
-                   placeholder="Nome do Jogador 2">
+
+            <input
+                type="text"
+                id="nome2"
+                placeholder="Nome do Jogador 2"
+            >
 
             <!-- BOTÃO -->
+
             <button onclick="comecarJogo()">
 
                 Começar Jogo
@@ -53,10 +64,12 @@
     </div>
 
     <!-- JOGO -->
+
     <div id="jogo"
-         style="display: none;">
+         style="display:none;">
 
         <!-- HEADER -->
+
         <header>
 
             <h1>Pedra, Papel e Tesoura</h1>
@@ -71,39 +84,50 @@
         </header>
 
         <!-- MAIN -->
+
         <main>
 
             <!-- BOTÕES -->
+
             <div class="game">
 
                 <!-- PEDRA -->
+
                 <button class="card"
                         onclick="jogar('pedra')">
 
-                    <img src="./pedra2.png"
-                         alt="Pedra">
+                    <img
+                        src="./pedra2.png"
+                        alt="Pedra"
+                    >
 
                     <h2>Pedra</h2>
 
                 </button>
 
                 <!-- PAPEL -->
+
                 <button class="card"
                         onclick="jogar('papel')">
 
-                    <img src="./papel2.png"
-                         alt="Papel">
+                    <img
+                        src="./papel2.png"
+                        alt="Papel"
+                    >
 
                     <h2>Papel</h2>
 
                 </button>
 
                 <!-- TESOURA -->
+
                 <button class="card"
                         onclick="jogar('tesoura')">
 
-                    <img src="./tesoura2.png"
-                         alt="Tesoura">
+                    <img
+                        src="./tesoura2.png"
+                        alt="Tesoura"
+                    >
 
                     <h2>Tesoura</h2>
 
@@ -112,30 +136,41 @@
             </div>
 
             <!-- PLACAR -->
+
             <div class="scores">
 
                 <!-- JOGADOR 1 -->
+
                 <div class="score">
 
                     <h3 id="jogador1Nome">
+
                         Jogador 1
+
                     </h3>
 
                     <p id="score1">
+
                         0
+
                     </p>
 
                 </div>
 
                 <!-- JOGADOR 2 -->
+
                 <div class="score">
 
                     <h3 id="jogador2Nome">
+
                         Jogador 2
+
                     </h3>
 
                     <p id="score2">
+
                         0
+
                     </p>
 
                 </div>
@@ -143,39 +178,53 @@
             </div>
 
             <!-- RESULTADO -->
+
             <div class="resultado">
 
-                <!-- JOGADOR 1 -->
+                <!-- RESULTADO JOGADOR 1 -->
+
                 <div class="escolha">
 
                     <h3 id="nomeResultado1">
+
                         Jogador 1
+
                     </h3>
 
-                    <img id="img1"
-                         src="./player2.png"
-                         alt="Jogador 1">
+                    <img
+                        id="img1"
+                        src="./player1.png"
+                        alt="Jogador 1"
+                    >
 
                 </div>
 
+                <!-- X -->
+
                 <h1>X</h1>
 
-                <!-- JOGADOR 2 -->
+                <!-- RESULTADO JOGADOR 2 -->
+
                 <div class="escolha">
 
                     <h3 id="nomeResultado2">
+
                         Jogador 2
+
                     </h3>
 
-                    <img id="img2"
-                         src="./player2.png"
-                         alt="Jogador 2">
+                    <img
+                        id="img2"
+                        src="./player2.png"
+                        alt="Jogador 2"
+                    >
 
                 </div>
 
             </div>
 
             <!-- MENSAGEM -->
+
             <div class="mensagem">
 
                 <p id="mensagem">
@@ -186,7 +235,8 @@
 
             </div>
 
-            <!-- BOTÃO RESET -->
+            <!-- BOTÃO -->
+
             <button class="reset"
                     onclick="reiniciar()">
 
@@ -199,6 +249,7 @@
     </div>
 
     <!-- JAVASCRIPT -->
+
     <script src="index.js"></script>
 
 </body>
